@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel JM Gelo - Supabase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="painel-container">
+    <h2>Painel de Produtos (Banco Online)</h2>
+    <form id="formProduto" onsubmit="adicionarProduto(); return false;">
+      <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
+      <input type="number" id="precoProduto" placeholder="Preço (R$)" step="0.01" required>
+      <button type="submit">Adicionar Produto</button>
+    </form>
+
+    <h3>Produtos cadastrados:</h3>
+    <ul id="listaProdutos"></ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="produtos.js"></script>
+</body>
+</html>
