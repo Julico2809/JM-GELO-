@@ -5,14 +5,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
-.login-container {
+.painel-container {
   background: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 100%;
+  max-width: 500px;
 }
 
 input {
@@ -35,7 +38,8 @@ button:hover {
   background: #0056b3;
 }
 
-.erro {
-  color: red;
-  margin-top: 10px;
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
 }

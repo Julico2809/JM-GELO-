@@ -2,20 +2,23 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login JM Gelo</title>
+  <title>Painel JM Gelo - Supabase</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login JM Gelo</h2>
-    <form onsubmit="return validarLogin()">
-      <input type="text" id="usuario" placeholder="Usuário" required>
-      <input type="password" id="senha" placeholder="Senha" required>
-      <button type="submit">Entrar</button>
-      <p id="erro" class="erro"></p>
+  <div class="painel-container">
+    <h2>Painel de Produtos (Banco Online)</h2>
+    <form id="formProduto" onsubmit="adicionarProduto(); return false;">
+      <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
+      <input type="number" id="precoProduto" placeholder="Preço (R$)" step="0.01" required>
+      <button type="submit">Adicionar Produto</button>
     </form>
+
+    <h3>Produtos cadastrados:</h3>
+    <ul id="listaProdutos"></ul>
   </div>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="produtos.js"></script>
 </body>
 </html>
